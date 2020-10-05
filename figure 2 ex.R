@@ -118,4 +118,4 @@ m <- grid.arrange(fig2.adl, fig2.iadl, fig2.nh, legend , ncol=2, top=t.title, bo
 ggsave("/fig2-full.png", m, width = 8, height = 11)
 
 m1 <- grid.arrange(fig2.adl, fig2.iadl, fig2.nh, legend, ncol=2)
-ggsave("/fig2.png", m1, width = 8, height = 9)
+ggsave("/fig2-ex.png", m1, width = 8, height = 9)
