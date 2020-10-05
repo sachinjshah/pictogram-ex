@@ -1,4 +1,7 @@
 
+## First follow this tutorial to install proper fonts and make them available to R: https://rud.is/rpubs/building-pictograms.html
+
+
 library(waffle)
 library(hrbrthemes)
 library(extrafont)
@@ -14,7 +17,7 @@ mod.theme <-theme_ipsum_rc(base_family = "Arial",
                            caption_margin = 0,
                            grid="",
                            plot_margin = margin(0, 0, 0, 0),
-                           panel_spacing = grid::unit(0, "lines"),) +
+                           panel_spacing = grid::unit(0, "lines")) +
   theme_enhance_waffle() +
   theme(legend.position = "none")
   theme(legend.text = element_text(size = 10, hjust = 0, vjust = 1))
@@ -112,7 +115,7 @@ t.caption <- textGrob(text.caption, gp=gpar(fontsize=9), x=0.01, hjust=0)
 ## Save images
 
 m <- grid.arrange(fig2.adl, fig2.iadl, fig2.nh, legend , ncol=2, top=t.title, bottom = t.caption)
-ggsave("/Users/sachinjshah/Dropbox (Personal)/Research - Active/RP05-06 LT function/fig2-full-2020-10-01 12p.png", m, width = 8, height = 11)
+ggsave("/fig2-full.png", m, width = 8, height = 11)
 
 m1 <- grid.arrange(fig2.adl, fig2.iadl, fig2.nh, legend, ncol=2)
-ggsave("/Users/sachinjshah/Dropbox (Personal)/Research - Active/RP05-06 LT function/fig2-2020-10-01 12p.png", m1, width = 8, height = 9)
+ggsave("/fig2.png", m1, width = 8, height = 9)
